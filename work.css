@@ -70,10 +70,6 @@ body {
   height: 100vh;
   width: 100%;
   background: #444343;
-  transition: background 1s cubic-bezier(0.99, 1, 0.92, 1);
-}
-.is-sliding .slides {
-  transition: background 0.3s cubic-bezier(0.99, 1, 0.92, 1);
 }
 
 .slide {
