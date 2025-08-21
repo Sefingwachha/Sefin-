@@ -73,7 +73,7 @@ body {
   transition: background 1s cubic-bezier(0.99, 1, 0.92, 1);
 }
 .is-sliding .slides {
-  background: #ededed;
+/*   background: #ededed; */
   transition: background 0.3s cubic-bezier(0.99, 1, 0.92, 1);
 }
 
