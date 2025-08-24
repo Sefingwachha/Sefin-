@@ -1,4 +1,4 @@
-@import url('https://unpkg.com/normalize.css') layer(normalize);
+@import url("https://unpkg.com/normalize.css") layer(normalize);
 
 @layer normalize, base, demo;
 
@@ -62,21 +62,21 @@
     transition-timing-function: var(--easing);
   }
 
-  [data-active='true'] :is(a, p, h3, svg) {
+  [data-active="true"] :is(a, p, h3, svg) {
     opacity: var(--opacity, 1);
   }
-  [data-active='true'] :is(a, p) {
+  [data-active="true"] :is(a, p) {
     transition-delay: calc(var(--speed) * 0.25);
   }
 
-  [data-active='true'] img {
+  [data-active="true"] img {
     filter: grayscale(0) brightness(1);
     scale: 1;
     transition-delay: calc(var(--speed) * 0.25);
   }
 
   article {
-/*     outline: 2px dashed canvasText; */
+    /*     outline: 2px dashed canvasText; */
     width: calc(var(--article-width) * 1px);
     height: 100%;
     position: absolute;
@@ -120,7 +120,6 @@
       height: 18px;
       line-height: 1;
       color: inherit;
-      
 
       &:is(:focus-visible, :hover) {
         outline: none;
@@ -218,11 +217,11 @@
     color-scheme: light dark;
   }
 
-  [data-theme='light'] {
+  [data-theme="light"] {
     color-scheme: light only;
   }
 
-  [data-theme='dark'] {
+  [data-theme="dark"] {
     color-scheme: dark only;
   }
 
@@ -257,14 +256,14 @@
     display: grid;
     place-items: center;
     min-height: 100vh;
-    font-family: 'SF Pro Text', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue',
+    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
       Helvetica, Arial, sans-serif, system-ui;
   }
 
   body::before {
     --size: 45px;
     --line: color-mix(in hsl, canvasText, transparent 70%);
-    content: '';
+    content: "";
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -327,7 +326,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.85);
+  background-color: rgba(0, 0, 0, 0.85);
   text-align: center;
 }
 
@@ -336,7 +335,7 @@
   max-height: 80%;
   margin-top: 5%;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   animation: zoom 0.3s ease;
 }
 
@@ -351,10 +350,54 @@
 }
 
 @keyframes zoom {
-  from { transform: scale(0.5); }
-  to { transform: scale(1); }
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .tp-dfwv {
   top: 25px !important;
+}
+
+@media (max-width: 768px) {
+  ul {
+    grid-template-columns: 1fr; /* 2 columns on tablets/phones */
+    height: 1800px;
+  }
+  article h3 {
+    font-size: 0.8rem;
+  }
+  article p {
+    font-size: 12px;
+  }
+
+  .bear-link {
+    top: -13px;
+    left: 15px;
+    position: absolute;
+  }
+
+  h1.fluid {
+    font-size: 28px;
+    margin-top: 110px;
+  }
+
+  .tp-dfwv {
+    width: 215px;
+  }
+
+  .close {
+    top: 40px;
+    right: 30px;
+    font-size: 24px;
+  }
+  li :is(a, p) {
+    opacity: 0.8;
+  }
+  li img {
+     filter: none; 
+  }
 }
