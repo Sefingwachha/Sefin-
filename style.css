@@ -364,8 +364,8 @@
 
 @media (max-width: 768px) {
   ul {
-    grid-template-columns: 1fr; /* 2 columns on tablets/phones */
-    height: 1800px;
+    grid-template-columns: 1fr !important; /* 2 columns on tablets/phones */
+    height: 1800px !important;
   }
   article h3 {
     font-size: 0.8rem;
